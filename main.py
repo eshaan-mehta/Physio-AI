@@ -341,7 +341,7 @@ while capture.isOpened():
                     anim_count_back = 1
 
                 #detect front knee too far forward
-                if front_knee_angle < FRONT_knee_THRESHOLD and not is_up and anim_count_knee == 0:
+                if front_knee_angle < FRONT_KNEE_THRESHOLD and not is_up and anim_count_knee == 0:
                     knee_warnings += 1
                     anim_count_knee = 1
                     

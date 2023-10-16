@@ -26,11 +26,11 @@ back_side = []
 front_leg = ""
 
 
-st.title("Physiotherapy Exercise Analyst")
+st.title("PhysioAI")
 
 
 """ 
-__Welcome to our Physiotherapy Exercise Analyst Demo!__  
+__Welcome the PhysioAI demo!__  
 _Made By: Eshaan Mehta, Darius Rudaitis_
 * Ensure that your __entire__ body is in frame. 
 * Raise your __left hand__ and the system will enter _ACTIVE_ mode.

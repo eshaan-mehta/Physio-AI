@@ -30,7 +30,7 @@ st.title("PhysioAI")
 
 
 """ 
-__Welcome the PhysioAI demo!__  
+__Welcome the demo for PhysioAI, the ultimate lunge analyst__  
 _Made By: Eshaan Mehta, Darius Rudaitis_
 * Ensure that your __entire__ body is in frame. 
 * Raise your __left hand__ and the system will enter _ACTIVE_ mode.

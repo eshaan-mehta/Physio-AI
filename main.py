@@ -369,6 +369,7 @@ while capture.isOpened():
 
     annotated_frame = overlay(annotated_frame) #adding all overlay
 
+    #display graph once created
     if is_graph_created:
         annotated_frame = graph_overlay(annotated_frame)
 

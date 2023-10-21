@@ -321,8 +321,6 @@ while capture.isOpened():
                     knee_warnings += 1
                     anim_count_knee = 1
                     
-            
-
                 # ----------- FRAME COUNTING ---------------------------
                 frame_count += 1
                 if frame_count % 3 == 0:
@@ -370,7 +368,8 @@ while capture.isOpened():
         anim_count_knee = 0
 
     annotated_frame = overlay(annotated_frame) #adding all overlay
-    
+
+    #display graph once created
     if is_graph_created:
         annotated_frame = graph_overlay(annotated_frame)
 
@@ -383,3 +382,8 @@ while capture.isOpened():
 
 capture.release()
 cv.destroyAllWindows()
+
+try:
+    remove(PATH)
+except:
+    pass

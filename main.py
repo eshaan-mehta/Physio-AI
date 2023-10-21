@@ -9,7 +9,7 @@ ANIM_FRAMES = 12
 UP_THRESHOLD = 150
 DOWN_THRESHOLD = 110
 STRAIGHTNESS_THRESHOLD = 65
-FRONT_knee_THRESHOLD = 87
+FRONT_KNEE_THRESHOLD = 87
 
 
 STATUS_LIST = {0:"OFF", 1:"RESET", 2:"ACTIVE", 3:"END"}
@@ -246,7 +246,6 @@ def add_warning(frame: cv.Mat, warning_type: int) -> cv.Mat:
         
     return frame
 
-
 reset()
 while capture.isOpened():
     success, frame = capture.read() #extracts single frame from video, success if receiving video
@@ -318,7 +317,7 @@ while capture.isOpened():
                     anim_count_back = 1
 
                 #detect front knee too far forward
-                if front_knee_angle < FRONT_knee_THRESHOLD and not is_up and anim_count_knee == 0:
+                if front_knee_angle < FRONT_KNEE_THRESHOLD and not is_up and anim_count_knee == 0:
                     knee_warnings += 1
                     anim_count_knee = 1
                     
@@ -371,10 +370,10 @@ while capture.isOpened():
         anim_count_knee = 0
 
     annotated_frame = overlay(annotated_frame) #adding all overlay
-
+    
     if is_graph_created:
         annotated_frame = graph_overlay(annotated_frame)
-        
+
     cv.imshow(WINDOW_NAME, annotated_frame) #display frame
 
     #program waits 1ms each between frames checks for keypress of 'q'

@@ -1,7 +1,5 @@
 from setup import *
 
-import streamlit as st
-
 OVERLAY_HEIGHT = 100
 FRAME_INTERVAL = 5
 
@@ -24,27 +22,6 @@ front_knee = []
 back_knee = []
 back_side = []
 front_leg = ""
-
-
-st.title("PhysioAI")
-
-
-""" 
-__Welcome the demo for PhysioAI, the ultimate lunge analyst__  
-_Made By: Eshaan Mehta, Darius Rudaitis_
-* Ensure that your __entire__ body is in frame. 
-* Raise your __left hand__ and the system will enter _ACTIVE_ mode.
-* Perform lunges facing __sidways__
-* Raise your __right hand__ to enter _END_ mode and view analytics. 
-* Raise __left hand__ again to enter _RESET_ mode and start again. 
-"""
-
-st.header("Video Feed:")
-video_container = st.empty()
-
-st.header("Graph Analytics:")
-graph_container = st.empty()
-
 
 def reset() -> None:
     global front_knee_angle, back_knee_angle, hip_angle
@@ -269,7 +246,6 @@ def add_warning(frame: cv.Mat, warning_type: int) -> cv.Mat:
         
     return frame
 
-
 reset()
 while capture.isOpened():
     success, frame = capture.read() #extracts single frame from video, success if receiving video
@@ -394,17 +370,11 @@ while capture.isOpened():
         anim_count_knee = 0
 
     annotated_frame = overlay(annotated_frame) #adding all overlay
-
+    
     if is_graph_created:
-        #annotated_frame = graph_overlay(annotated_frame)
-        graph_container.image(PATH, use_column_width=True)
-    else:
-        graph_container.image("graphs/template.png")
+        annotated_frame = graph_overlay(annotated_frame)
 
-
-    #cv.resizeWindow(WINDOW_NAME, 900, 700)
-    #cv.imshow(WINDOW_NAME, annotated_frame) #display frame
-    video_container.image(annotated_frame, channels="BGR", use_column_width=True)
+    cv.imshow(WINDOW_NAME, annotated_frame) #display frame
 
     #program waits 1ms each between frames checks for keypress of 'q'
     if (cv.waitKey(1) & 0xFF) == ord('q'):

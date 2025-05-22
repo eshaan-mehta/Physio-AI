@@ -1,18 +1,11 @@
 # PhysioAI
-# created by: Eshaan Mehta, Darius Rudaitis
 
-This project utilizes YoloV8 Pose, OpenCV, PyTorch, Matplotlib to deliver a cohesive AI powered lunge analyst.
+### Overview
+Physio AI is a **Computer Vision** based application designed to help recovering physiotherapy patients with their exercises. Powered by **YOLOv8, OpenCV, PyTorch**, it can accurately track your movement in real time to ensure you perform exercises safely, if you perform your excercises in an unsafe matter, the system will detect that and provide immediate warnings, informing you to fix your form. At the end of your set, it will also provide detailed graphs and analytics using **Matplotlib**, so you can monitor your performance.
 
--- File Structure --
-* requirements.txt: list of all dependencies needed to run project
-* setup.py: install dependencies, move model to appropriate device, create model and video object
-* main.py: all code, logic related to project
-* yolov8s-pose.pt: model used in project
-* graphs: graph pictures are saved here once generated.
-    * template.png: template for blank graph
+Watch the demo [Here](https://www.linkedin.com/feed/update/urn:li:activity:7123093590397906945/)
 
-
--- Operational instructions -- 
+### How to run
 1. Run: pip install -r requirements.txt
 2. Run main.py to begin
 3. Ensure entire body is in frame, and stand sideways

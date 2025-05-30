@@ -6,8 +6,8 @@ Physio AI is a **Computer Vision** based application designed to help recovering
 Watch the demo [Here](https://www.linkedin.com/feed/update/urn:li:activity:7123093590397906945/)
 
 <div style="display: flex;">
-<img src="Images/bad.png" width="300">
-<img src="Images/chart.png" width="300">
+<img src="Images/bad.png" width="400">
+<img src="Images/chart.png" width="400">
 </div>
 
 ### How to run

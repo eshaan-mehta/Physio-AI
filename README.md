@@ -6,17 +6,17 @@ Physio AI is a **Computer Vision** based application designed to help recovering
 Watch the demo [Here](https://www.linkedin.com/feed/update/urn:li:activity:7123093590397906945/)
 
 <div style="display: flex;">
-<img src="Images/bad.png" width="400">
-<img src="Images/chart.png" width="400">
+  <img src="Images/bad.png" width="400">
+  <img src="Images/chart.png" width="400">
 </div>
 
 ### How to run
-1. Run: pip install -r requirements.txt
-2. Run main.py to begin
-3. Ensure entire body is in frame, and stand sideways
-4. Raise left hand to reset and activate program
+1. Run: `pip install -r requirements.txt`
+2. Run `python3 main.py` to begin
+3. Ensure your entire body is in frame, and **stand sideways**
+4. Raise your left hand to reset and activate the 
 5. Perform exercise, watch for warning messages
-6. When finished, raise right hand to see graph
-7. Raise left hand again to reset and use again
-8. Press 'q' on keyboard to close project window
+6. When finished, raise your right hand to see the graph
+7. Raise your left hand again to reset and use it again
+8. Press `q` on keyboard to close project window
 

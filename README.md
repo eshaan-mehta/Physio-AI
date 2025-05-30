@@ -5,6 +5,11 @@ Physio AI is a **Computer Vision** based application designed to help recovering
 
 Watch the demo [Here](https://www.linkedin.com/feed/update/urn:li:activity:7123093590397906945/)
 
+<div style="display: flex;">
+<img src="Images/bad.png" width="500">
+<img src="Images/chart.png" width="500">
+</div>
+
 ### How to run
 1. Run: pip install -r requirements.txt
 2. Run main.py to begin
